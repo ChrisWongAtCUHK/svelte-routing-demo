@@ -9,13 +9,13 @@
 
 <Router {url}>
   <nav>
-    <Link to="/">Home</Link>
-    <Link to="/about">About</Link>
-    <Link to="/blog">Blog</Link>
+    <Link to="/svelte-routing-demo">Home</Link>
+    <Link to="/svelte-routing-demo/about">About</Link>
+    <Link to="/svelte-routing-demo/blog">Blog</Link>
   </nav>
   <div>
-    <Route path="/blog" component={Blog} />
-    <Route path="/about" component={About} />
-    <Route path="/"><Home /></Route>
+    <Route path="/svelte-routing-demo/blog" component={Blog} />
+    <Route path="/svelte-routing-demo/about" component={About} />
+    <Route path="/svelte-routing-demo"><Home /></Route>
   </div>
 </Router>
