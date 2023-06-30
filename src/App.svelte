@@ -5,17 +5,18 @@
   import Blog from './routes/Blog.svelte'
 
   export let url = '/';
+  export let base = '/svelte-routing-demo';
 </script>
 
 <Router {url}>
   <nav>
-    <Link to="/svelte-routing-demo">Home</Link>
-    <Link to="/svelte-routing-demo/about">About</Link>
-    <Link to="/svelte-routing-demo/blog">Blog</Link>
+    <Link to={base}>Home</Link>
+    <Link to={base + "/about"}>About</Link>
+    <Link to={base + "/blog"}>Blog</Link>
   </nav>
   <div>
-    <Route path="/svelte-routing-demo/blog" component={Blog} />
-    <Route path="/svelte-routing-demo/about" component={About} />
-    <Route path="/svelte-routing-demo"><Home /></Route>
+    <Route path={base + "/blog"} component={Blog} />
+    <Route path={base + "/about"} component={About} />
+    <Route path={base}><Home /></Route>
   </div>
 </Router>
